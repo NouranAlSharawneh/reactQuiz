@@ -1,7 +1,8 @@
+import imageLogo from "./assets/logo512.png";
 function Header() {
   return (
     <header className="app-header">
-      <img src="./assets/react.svg" alt="React logo" />
+      <img src={imageLogo} alt="React logo" />
       <h1>The React Quiz</h1>
     </header>
   );
