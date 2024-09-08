@@ -1,4 +1,4 @@
-import imageLogo from "./assets/logo512.png";
+import imageLogo from "../assets/logo512.png";
 function Header() {
   return (
     <header className="app-header">
