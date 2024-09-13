@@ -170,6 +170,11 @@ progress {
   transform: translateX(2rem);
 }
 
+.answer.wrong {
+  background-color: #e05858;
+  border: 2px solid #e05858;
+  color: var(--color-light);
+}
 .result {
   background-color: var(--color-theme);
   color: var(--color-light);
