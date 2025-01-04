@@ -13,8 +13,6 @@ import Footer from "./Footer";
 import Timer from "./Timer";
 import { useQuiz } from "../contexts/QuizContext";
 
-const SECS_PER_QUESTION = 30;
-
 function App() {
   const { status } = useQuiz();
   return (
@@ -26,39 +24,15 @@ function App() {
         {status === "ready" && <StartSrceen />}
         {status === "active" && (
           <>
-            <Progress
-            // questionIndex={questionIndex}
-            // numQuestions={numberOfQuestions}
-            // points={points}
-            // sumOfPoints={sumOfPoints}
-            // answer={answer}
-            />
-            <Question
-            // question={questions[questionIndex]}
-            // dispatch={dispatch}
-            // answer={answer}
-            />
+            <Progress />
+            <Question />
             <Footer>
-              <Timer
-              // dispatch={dispatch} secondsRemaining={secondsRemaining}
-              />
-              <NextButton
-              // dispatch={dispatch}
-              // answer={answer}
-              // questionIndex={questionIndex}
-              // numberOfQuestions={numberOfQuestions}
-              />
+              <Timer />
+              <NextButton />
             </Footer>
           </>
         )}
-        {status === "finished" && (
-          <FinishedScreen
-          // points={points}
-          // sumOfPoints={sumOfPoints}
-          // highscore={highscore}
-          // dispatch={dispatch}
-          />
-        )}
+        {status === "finished" && <FinishedScreen />}
       </Maincomp>
     </div>
   );
